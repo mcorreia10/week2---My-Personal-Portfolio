@@ -1,0 +1,249 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* título à esquerda, nav à direita */
+  align-items: center;             /* centraliza verticalmente */
+  padding: 10px 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* este é o section que contém a imagem */
+main > section:first-of-type {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente (caso necessário) */
+  margin-top: 30px;
+}
+
+/* imagem em si */
+.portfolio {
+  width: 90%;                /* ocupa 90% da largura do section */
+  max-width: 1000px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+/* Estilo do título */
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Remove as bolinhas e margens da lista */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                   /* coloca os itens em linha */
+  gap: 25px;                       /* espaço entre links */
+  margin: 0;
+}
+
+nav li {
+  display: inline; /* coloca-os em linha */
+  margin-right: 20px; /* espaço entre os itens */
+}
+
+/* Estilo dos links */
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff; /* muda a cor ao passar o rato */
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 30px;
+  gap: 120px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+/* _________________________________________ */
+
+.container article {
+  flex: 1 1 250px;           /* ocupa espaço igual e ajusta */
+  max-width: 300px;          /* impede que fiquem demasiado largos */
+  border: 2px solid orange;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/*_____________________________________________*/
+
+#contacts h2 {
+  padding-left: 30px;
+}
+
+.contact-form {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  background: #f6f6f6;
+  border-radius: 8px;
+  box-sizing: border-box;   /* 👈 evita estourar quando a janela fecha */
+}
+
+.contact-form .field { 
+  margin-bottom: 16px; 
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;               /* 👈 estica a 100% */
+  box-sizing: border-box;     /* padding não “estoura” a largura */
+  padding: 10px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+
+.contact-form textarea { 
+  resize: vertical; min-height: 140px; 
+}
+
+/* foco acessível */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0a27ff;
+  box-shadow: 0 0 0 3px rgba(10,39,255,.12);
+}
+
+/* botão */
+.contact-form .btn {
+  background: #0a27ff;
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover { 
+  filter: brightness(0.96); 
+}
+
+
+footer {
+  border-top: 1px solid #ccc; /* 👈 cria a linha */
+  padding-top: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+/*----------------------------------------------*/
+/* 📱 Versão Mobile (até 768px) */
+/*----------------------------------------------*/
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;      /* empilha título e nav */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;      /* links em coluna */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .portfolio {
+    border-radius: 0;            /* evita distorções */
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;      /* projetos em coluna */
+    align-items: center;
+  }
+
+  .container article {
+    max-width: 90%;              /* ocupa quase toda a largura */
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/*----------------------------------------------*/
+/* 💻 Versão Tablet (até 1024px) */
+/*----------------------------------------------*/
+@media (max-width: 1024px) {
+
+  header {
+    padding: 15px 25px;
+  }
+
+  .container article {
+    max-width: 45%; /* dois projetos por linha */
+  }
+
+  .container { 
+    gap: 40px; 
+  }
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Site</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio Site</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="./portfolio.png" alt="portfolio" class="portfolio">
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm Marcelo Correia, I have 32 years old and I'm Portuguese. Currently I'm a mechanical engineer and I love football, tecnology and hang out with my friends.</p>
+            <p>Professionaly speaking I've reached to a point in my life where I don't feel happy doing what I do. So, I'm starting a Full Stack Development Bootcamp on Codecademy, to try to change career and pursuit some new professional adventures.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Now that I'm just getting started with web development, some ideas crossed my mind and there are some projects that I would really like to do.</p>
+            <div class="container">
+                <article class="item1">
+                    <h3>Full Workout and Meal Plan Project</h3>
+                    <img src="./gym.png" alt="workout" class="item1foto">
+                    <p>An app designed to personalize my workouts. The main idea is to provide my personal information and fitness goals, and the app will generate tailored exercise routines and meal plans just for me.</p>
+                </article>
+                <article class="item2">
+                    <h3>Personal Financial Project</h3>
+                    <img src="./fp.png" alt="finance" class="item1foto">
+                    <p>An app to track my expenses and savings. Each month, it gives me a summary of my finances and shows if I’ve met my goals</p>
+                </article>
+                <article class="item3">
+                    <h3>Cripto Price Tracker</h3>
+                    <img src="./cripto.png" alt="cripto" class="">
+                    <p>An app to check my cripto portfólio and follow the latest price changes and market trends. </p>
+                </article>
+            </div>
+            
+
+        </section>
+
+        <section id="contacts">
+            <h2>Contact</h2>
+            <form class="contact-form" action="#" method="post" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="8" placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Marcelo Correia. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
+
+
